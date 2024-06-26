@@ -1,4 +1,6 @@
 import React from 'react';
+import "./styles.css";
+
 import { Joke } from '../../../utils/types';
 
 import Card from '@mui/material/Card';
@@ -6,16 +8,16 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Box } from '@mui/system';
+import { Box } from '@mui/material';
 
 interface CardJokeProps {
   joke: Joke;
+  randomMeme: string;
 }
 
-const JokeListItem: React.FC<CardJokeProps> = ({ joke }) => {
-  console.log('joke', joke)
+const JokeListItem: React.FC<CardJokeProps> = ({ joke, randomMeme }) => {
   const card = (
-    <React.Fragment>
+    <Box className="joke-list-content" sx={{backgroundImage: `url('${randomMeme}')`}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {joke.setup}
@@ -27,15 +29,11 @@ const JokeListItem: React.FC<CardJokeProps> = ({ joke }) => {
       <CardActions>
         <Button size="small">{joke.type}</Button>
       </CardActions>
-    </React.Fragment>
+    </Box>
   );
 
   return (
-    <li>
-      <Box sx={{ minWidth: 275 }}>
-        <Card variant="outlined">{card}</Card>
-      </Box>
-    </li>
+    <Card sx={{ minWidth: 275, maxWidth: 500 }} variant="outlined">{card}</Card>
   );
 };
 

@@ -1,0 +1,11 @@
+.joke-list-content {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100px;
+}
+
+.joke-list-content .MuiCardContent-root {
+  text-align: left;
+  max-width: 40%;
+}
