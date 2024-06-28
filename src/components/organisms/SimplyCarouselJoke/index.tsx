@@ -3,7 +3,6 @@ import "./styles.css";
 
 import ReactSimplyCarousel from 'react-simply-carousel';
 import CardJoke from '../../molecules/CardJoke';
-import { Box } from '@mui/material';
 import { Joke } from '../../../utils/types';
 import { GridLoader } from 'react-spinners';
 

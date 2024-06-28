@@ -2,6 +2,7 @@ import { FC } from 'react';
 import "./styles.css";
 
 import { Autocomplete, Box, Button, FormControl, Grid, TextField, } from '@mui/material';
+import ButtonJoke from '../../atoms/ButtonJoke';
 
 const NavigationJoke: FC<{
   setJokeCategoryValue: (value: string) => void;
@@ -28,21 +29,13 @@ const NavigationJoke: FC<{
             />
           </Grid>
           <Grid item xs={3}>
-            <Button
-              sx={{
-                backgroundColor: '#BA1102',
-                '&:hover': {
-                  backgroundColor: '#D46401',
-                }
-              }}
-              variant="contained"
-              onClick={() => {
-                setJokeCategoryValue('')
-                refetch()
-              }}
-              >
-              Get New Jokes
-            </Button>
+          <ButtonJoke
+            onClick={() => {
+              setJokeCategoryValue('')
+              refetch()
+            }}
+            buttonText="Get New Jokes"
+          />
           </Grid>
           <Grid item xs={3}>
             <Button

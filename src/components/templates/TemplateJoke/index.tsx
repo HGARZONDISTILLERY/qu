@@ -48,13 +48,9 @@ const TemplateJoke: FC = () => {
     data: randomJokeByTypeData,
     error: randomJokeByTypeError,
     isLoading: randomJokeByTypeIsLoading,
-    refetch: randomJokeByTypeRefetch
   } = useQuery<Joke[]>(['randomTypejokes', jokeTypeValue], () => fetchJokesByType(jokeTypeValue), {
     staleTime: Infinity,
     cacheTime: Infinity,
-    refetchOnWindowFocus: false,
-    refetchOnReconnect: false,
-    refetchOnMount: false,
     enabled: jokeTypeValue !== '',
   });
 

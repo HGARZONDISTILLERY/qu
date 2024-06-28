@@ -6,25 +6,3 @@
   width: 200px;
 }
 
-.forwardBtnProps,
-.backwardBtnProps {
-  align-self: center;
-  background: black;
-  border: none;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  height: 30px;
-  line-height: 1;
-  text-align: center;
-  width: 30px;
-}
-
-.forwardBtnProps {
-  margin-left: 30px;
-}
-
-.backwardBtnProps {
-  margin-right: 30px;
-}

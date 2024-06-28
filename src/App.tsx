@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 import './App.css';
 import Home from './components/pages/Home';
-import {Helmet} from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { Box } from '@mui/system';
 
 function App() {
@@ -10,10 +10,11 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Box className="App" component="main">
-        <Helmet>
-          <link href="https://fonts.cdnfonts.com/css/cartoon-free" rel="stylesheet" />
-        </Helmet>
-
+        <HelmetProvider>
+          <Helmet>
+            <link href="https://fonts.cdnfonts.com/css/cartoon-free" rel="stylesheet" />
+          </Helmet>
+        </HelmetProvider>
         <Home />
       </Box>
     </QueryClientProvider>
