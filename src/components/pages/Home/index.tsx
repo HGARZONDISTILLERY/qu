@@ -1,15 +1,15 @@
 import { Box } from "@mui/system";
-import CarouselJoke from "../../templates/CarouselJoke";
+import TemplateJoke from "../../templates/TemplateJoke";
+
 import "./styles.css";
 
 const Home = () => {
   return (
     <>
       <Box component="header">
-        <h1>The JOKE show</h1>
-        <p>Enjoy a good joke at any time</p>
+        <h1>The joke show</h1>
       </Box>
-      <CarouselJoke />
+      <TemplateJoke />
     </>
   );
 };

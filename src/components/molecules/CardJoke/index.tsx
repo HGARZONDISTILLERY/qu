@@ -4,20 +4,18 @@ import "./styles.css";
 import { Joke } from '../../../utils/types';
 
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/material';
+import Meme1 from '../../../assets/meme-1.jpg';
 
 interface CardJokeProps {
   joke: Joke;
-  randomMeme: string;
 }
 
-const JokeListItem: React.FC<CardJokeProps> = ({ joke, randomMeme }) => {
+const JokeListItem: React.FC<CardJokeProps> = ({ joke }) => {
   const card = (
-    <Box className="joke-list-content" sx={{backgroundImage: `url('${randomMeme}')`}}>
+    <Box className="joke-list-content" sx={{backgroundImage: `url('${Meme1}')`}}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {joke.setup}
@@ -26,9 +24,6 @@ const JokeListItem: React.FC<CardJokeProps> = ({ joke, randomMeme }) => {
         {joke.punchline}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">{joke.type}</Button>
-      </CardActions>
     </Box>
   );
 
