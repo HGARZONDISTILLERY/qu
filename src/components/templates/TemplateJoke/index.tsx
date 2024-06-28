@@ -8,11 +8,12 @@ import { Box } from '@mui/material';
 import ModalJoke from '../../molecules/ModalJoke';
 import NavigationJoke from '../../organisms/NavigationJoke';
 import SimplyCarouselJoke from '../../organisms/SimplyCarouselJoke';
+import { GridLoader } from 'react-spinners';
 
 const TemplateJoke: FC = () => {
   const [showDadJoke, setShowDadJoke] = useState(false)
   const [open, setOpen] = useState(false)
-  const [categoryValue, setJokeCategoryValue] = useState<string>('')
+  const [jokeTypeValue, setJokeTypeValue] = useState<string>('')
 
 
   const handleClickOpen = () => {
@@ -44,24 +45,20 @@ const TemplateJoke: FC = () => {
   } = useQuery<DadJoke>('randomDadJoke', fetchRandomDadJoke);
 
   const {
-    data: jokeByTypeData,
-    error: jokeByTypeError,
-    isLoading: jokeByTypeIsLoading,
-    refetch: JokeByTypeRefetch
-  } = useQuery<Joke[]>(['randomTypejokes', categoryValue], () => fetchJokesByType(categoryValue), {
+    data: randomJokeByTypeData,
+    error: randomJokeByTypeError,
+    isLoading: randomJokeByTypeIsLoading,
+    refetch: randomJokeByTypeRefetch
+  } = useQuery<Joke[]>(['randomTypejokes', jokeTypeValue], () => fetchJokesByType(jokeTypeValue), {
     staleTime: Infinity,
     cacheTime: Infinity,
     refetchOnWindowFocus: false,
     refetchOnReconnect: false,
     refetchOnMount: false,
-    enabled: categoryValue !== '',
+    enabled: jokeTypeValue !== '',
   });
 
-  console.log('categoryValue', categoryValue)
-  console.log('>>', categoryValue !== '')
-  console.log('jokeByTypeData', jokeByTypeData)
-
-  if (randomJokeIsLoading) return <div>Loading...</div>;
+  if (randomJokeIsLoading) return <Box sx={{marginTop: '150px'}}><GridLoader margin={20} color="#BC1001" /></Box>;
 
   const renderError = (error: unknown) => {
     if (error instanceof Error) return <div>Error fetching jokes: {error.message}</div>;
@@ -71,15 +68,23 @@ const TemplateJoke: FC = () => {
     <>
       {renderError(randomJokeError)}
       <NavigationJoke 
-        setJokeCategoryValue={setJokeCategoryValue}
+        setJokeCategoryValue={setJokeTypeValue}
         refetch={randomJokeRefetch}
         handleClickOpen={handleClickOpen}
         />
       <Box component="section" className="joke-category-section">
-        <SimplyCarouselJoke
-          randomJokeIsLoading={randomJokeIsLoading}
-          randomJokeData={randomJokeData}
+        {
+          jokeTypeValue !== '' ?
+          <SimplyCarouselJoke
+            isLoading={randomJokeByTypeIsLoading}
+            randomJokeData={randomJokeByTypeData}
+          /> :
+          <SimplyCarouselJoke
+            isLoading={randomJokeIsLoading}
+            randomJokeData={randomJokeData}
           />
+        }
+
         <ModalJoke
           showDadJoke={showDadJoke}
           dadJokeIsLoading={dadJokeIsLoading}

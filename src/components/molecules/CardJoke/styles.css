@@ -5,6 +5,12 @@
   background-position: 100px;
 }
 
+.joke-list-content h5 {
+  background: yellow;
+  padding: 5px;
+  font-size: 16px;
+}
+
 .joke-list-content .MuiCardContent-root {
   text-align: left;
   max-width: 40%;

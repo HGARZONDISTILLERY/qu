@@ -20,7 +20,7 @@ const JokeListItem: React.FC<CardJokeProps> = ({ joke }) => {
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {joke.setup}
         </Typography>
-        <Typography variant="h5" component="div">
+        <Typography variant="h5">
         {joke.punchline}
         </Typography>
       </CardContent>

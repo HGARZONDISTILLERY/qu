@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import "./styles.css";
+
 import { Autocomplete, Box, Button, FormControl, Grid, TextField, } from '@mui/material';
 
 const NavigationJoke: FC<{
@@ -15,10 +17,11 @@ const NavigationJoke: FC<{
           <Grid item xs={6}>
             <Autocomplete
               disablePortal
+              disableClearable
               id="random-joke-select"
               options={jokeTypeList}
               sx={{ width: 300 }}
-              renderInput={(params) => <TextField {...params} label="Random Joke" />}
+              renderInput={(params) => <TextField {...params} label="Filter by joke type..." />}
               onChange={(event, newValue) => {
                 setJokeCategoryValue(String(newValue));
               }}
@@ -33,7 +36,11 @@ const NavigationJoke: FC<{
                 }
               }}
               variant="contained"
-              onClick={refetch}>
+              onClick={() => {
+                setJokeCategoryValue('')
+                refetch()
+              }}
+              >
               Get New Jokes
             </Button>
           </Grid>

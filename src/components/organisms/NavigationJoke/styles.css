@@ -1,0 +1,14 @@
+.joke-category-nav {
+  background-color: #fff;
+  min-width: 120px;
+  border: 1px dashed black;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.joke-category-nav span {
+  display: inline-block;
+  margin-right: 20px;
+}
