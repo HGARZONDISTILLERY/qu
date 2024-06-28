@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { DAD_JOKE_API_URL, JOKES_API_URL } from '../utils/constants';
-import { DadJoke, Joke, JokeType } from '../utils/types';
+import { DadJoke, Joke } from '../utils/types';
 import { randomIntFromInterval } from '../utils';
 
 export const fetchRandomJokes = async (): Promise<Joke[]> => {
@@ -11,7 +11,6 @@ export const fetchRandomJokes = async (): Promise<Joke[]> => {
       ...joke,
       votes: randomIntFromInterval(1, 100),
     }));
-    console.log('responseExtended', responseExtended)
     return responseExtended;
   } catch (error) {
     console.error('Error fetching jokes:', error);

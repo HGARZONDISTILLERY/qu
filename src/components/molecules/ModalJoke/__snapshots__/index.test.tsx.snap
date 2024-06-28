@@ -36,13 +36,20 @@ Object {
           role="dialog"
         >
           <div
-            class="MuiDialogContent-root css-ypiqx9-MuiDialogContent-root"
+            class="MuiDialogContent-root css-1msgct5-MuiDialogContent-root"
           >
             <p
               class="MuiTypography-root MuiDialogContentText-root MuiTypography-body1 MuiDialogContentText-root css-qfso29-MuiTypography-root-MuiDialogContentText-root"
             >
-              My dog used to chase people on a bike a lot. It got so bad I had to take his bike away.
+              <strong>
+                My dog used to chase people on a bike a lot. It got so bad I had to take his bike away.
+              </strong>
             </p>
+            <h4
+              class="MuiTypography-root MuiTypography-body1 css-1y8uj38-MuiTypography-root"
+            >
+              Purum pum pshhh!!!!
+            </h4>
           </div>
           <div
             class="MuiDialogActions-root MuiDialogActions-spacing css-knqc4i-MuiDialogActions-root"

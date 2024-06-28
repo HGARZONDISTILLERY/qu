@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, useMediaQuery, useTheme } from '@mui/material';
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Typography, useMediaQuery, useTheme } from '@mui/material';
 
 interface ModalJokeProps {
   showDadJoke: boolean;
@@ -36,10 +36,19 @@ const ModalJoke: FC<ModalJokeProps> = ({
             onClose={handleClose}
             aria-labelledby="responsive-dialog-title"
           >
-            <DialogContent>
+            <DialogContent sx={{width: '400px'}}>
               <DialogContentText>
-                {dadJokeData?.joke}
+                  <strong>{dadJokeData?.joke}</strong>
               </DialogContentText>
+              <Typography 
+                  sx={{
+                    textAlign: 'center',
+                    marginTop: '15px',
+                    color: 'gray'
+                  }}
+                  component="h4">
+                    Purum pum pshhh!!!!
+                </Typography>
             </DialogContent>
             <DialogActions>
               <Button autoFocus onClick={handleClose}>
