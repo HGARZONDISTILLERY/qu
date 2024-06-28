@@ -1,24 +1,24 @@
-import ModalJoke from '.';
-import {render} from '../../../../setupTests'
+import ModalJoke from ".";
+import { render } from "../../../../setupTests";
 
-test('ModalJoke component renders correctly', () => {
+test("ModalJoke component renders correctly", () => {
   const joke = {
-    "id": "R7UfaahVfFd",
-    "joke": "My dog used to chase people on a bike a lot. It got so bad I had to take his bike away.",
-    "status": 200
-  }
+    id: "R7UfaahVfFd",
+    joke: "My dog used to chase people on a bike a lot. It got so bad I had to take his bike away.",
+    status: 200,
+  };
 
   const tree = render(
-
     <ModalJoke
       showDadJoke
       dadJokeIsLoading={false}
       renderError={() => <>Error</>}
-      dadJokeError={'error'}
+      dadJokeError={"error"}
       open
-      handleClose={() => console.log('close')}
+      handleClose={() => console.log("close")}
       dadJokeData={joke}
-      dadJokeRefetch={() => console.log('refetch')} />
-      );
+      dadJokeRefetch={() => console.log("refetch")}
+    />,
+  );
   expect(tree).toMatchSnapshot();
 });

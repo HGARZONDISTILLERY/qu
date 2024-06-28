@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./styles.css";
 
-import ReactSimplyCarousel from 'react-simply-carousel';
-import CardJoke from '../../molecules/CardJoke';
-import { Joke } from '../../../utils/types';
-import { GridLoader } from 'react-spinners';
-
+import ReactSimplyCarousel from "react-simply-carousel";
+import CardJoke from "../../molecules/CardJoke";
+import { Joke } from "../../../utils/types";
+import { GridLoader } from "react-spinners";
 
 interface SimplyCarouselJokeProps {
   isLoading: boolean;
-  randomJokeData: Joke[] | undefined
+  randomJokeData: Joke[] | undefined;
 }
 
-const SimplyCarouselJoke: React.FC<SimplyCarouselJokeProps> = ({ isLoading, randomJokeData }) => {
+const SimplyCarouselJoke: React.FC<SimplyCarouselJokeProps> = ({
+  isLoading,
+  randomJokeData,
+}) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   return (
@@ -27,11 +29,11 @@ const SimplyCarouselJoke: React.FC<SimplyCarouselJokeProps> = ({ isLoading, rand
           itemsToShow={1}
           itemsToScroll={1}
           forwardBtnProps={{
-            className: 'forwardBtnProps',
+            className: "forwardBtnProps",
             children: <span>{`>`}</span>,
           }}
           backwardBtnProps={{
-            className: 'backwardBtnProps',
+            className: "backwardBtnProps",
             children: <span>{`<`}</span>,
           }}
           responsiveProps={[
@@ -50,19 +52,19 @@ const SimplyCarouselJoke: React.FC<SimplyCarouselJokeProps> = ({ isLoading, rand
               style: {
                 height: 16,
                 width: 16,
-                borderRadius: '50%',
+                borderRadius: "50%",
                 border: 0,
-                marginTop: '20px',
+                marginTop: "20px",
               },
             },
             activeItemBtnProps: {
               style: {
                 height: 16,
                 width: 16,
-                borderRadius: '50%',
+                borderRadius: "50%",
                 border: 0,
-                background: 'black',
-                marginTop: '20px',
+                background: "black",
+                marginTop: "20px",
               },
             },
           }}

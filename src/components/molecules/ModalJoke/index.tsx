@@ -1,5 +1,14 @@
-import { FC } from 'react';
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { FC } from "react";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 interface ModalJokeProps {
   showDadJoke: boolean;
@@ -23,7 +32,7 @@ const ModalJoke: FC<ModalJokeProps> = ({
   dadJokeRefetch,
 }) => {
   const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <>
@@ -36,19 +45,20 @@ const ModalJoke: FC<ModalJokeProps> = ({
             onClose={handleClose}
             aria-labelledby="responsive-dialog-title"
           >
-            <DialogContent sx={{width: '400px'}}>
+            <DialogContent sx={{ width: "400px" }}>
               <DialogContentText>
-                  <strong>{dadJokeData?.joke}</strong>
+                <strong>{dadJokeData?.joke}</strong>
               </DialogContentText>
-              <Typography 
-                  sx={{
-                    textAlign: 'center',
-                    marginTop: '15px',
-                    color: 'gray'
-                  }}
-                  component="h4">
-                    Purum pum pshhh!!!!
-                </Typography>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  marginTop: "15px",
+                  color: "gray",
+                }}
+                component="h4"
+              >
+                Purum pum pshhh!!!!
+              </Typography>
             </DialogContent>
             <DialogActions>
               <Button autoFocus onClick={handleClose}>

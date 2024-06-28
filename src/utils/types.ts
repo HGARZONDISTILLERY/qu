@@ -6,7 +6,7 @@ export interface Joke {
   votes?: number;
 }
 
-export type JokeType = 'programming' | 'general' | 'knock-knock';
+export type JokeType = "programming" | "general" | "knock-knock";
 
 export interface DadJoke {
   id: string;

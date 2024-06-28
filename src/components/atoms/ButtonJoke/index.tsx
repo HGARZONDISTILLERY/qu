@@ -1,5 +1,5 @@
-import React from 'react';
-import Button from '@mui/material/Button';
+import React from "react";
+import Button from "@mui/material/Button";
 
 interface ButtonJokeProps {
   onClick: () => void; // función de clic, no devuelve nada
@@ -10,9 +10,9 @@ const ButtonJoke = ({ onClick, buttonText }: ButtonJokeProps) => {
   return (
     <Button
       sx={{
-        backgroundColor: '#BA1102',
-        '&:hover': {
-          backgroundColor: '#D46401',
+        backgroundColor: "#BA1102",
+        "&:hover": {
+          backgroundColor: "#D46401",
         },
       }}
       variant="contained"
