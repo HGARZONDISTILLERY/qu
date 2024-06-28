@@ -1,5 +1,5 @@
 export interface Joke {
-  type: JokeType;
+  type: JokeType | string;
   setup: string;
   punchline: string;
   id: number;
