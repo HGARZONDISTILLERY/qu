@@ -24,6 +24,13 @@ Object {
             >
               Because they use a strongly typed language.
             </h5>
+            <p
+              class="MuiTypography-root MuiTypography-body1 joke-list-votes css-ahj2mt-MuiTypography-root"
+            >
+              <strong>
+                Votes: 
+              </strong>
+            </p>
           </div>
         </div>
       </div>
@@ -49,6 +56,13 @@ Object {
           >
             Because they use a strongly typed language.
           </h5>
+          <p
+            class="MuiTypography-root MuiTypography-body1 joke-list-votes css-ahj2mt-MuiTypography-root"
+          >
+            <strong>
+              Votes: 
+            </strong>
+          </p>
         </div>
       </div>
     </div>

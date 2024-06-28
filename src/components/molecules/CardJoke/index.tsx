@@ -23,6 +23,9 @@ const JokeListItem: React.FC<CardJokeProps> = ({ joke }) => {
         <Typography variant="h5">
         {joke.punchline}
         </Typography>
+        <Typography className="joke-list-votes">
+          <strong>Votes: {joke?.votes}</strong>
+        </Typography>
       </CardContent>
     </Box>
   );
