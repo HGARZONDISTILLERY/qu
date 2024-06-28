@@ -12,6 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React-spinners
 - React-error-boundary
 - React-Helmet
+- Prettier
 - Jest
 
 ### APIs
