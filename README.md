@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# The joke show
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Dependencies
 
-In the project directory, you can run:
+- Typescript
+- React-query
+- React-simply-carousel
+- React-spinners
+- React-error-boundary
+- React-Helmet
+- Jest
 
-### `npm start`
+## Known issues
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Sometimes a FOUC apperears when loading the carousel component ( https://en.wikipedia.org/wiki/Flash_of_unstyled_content).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Questions
 
-### `npm test`
+#### What's a closure? Where in the code is there a closure?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Closure is a programming concept where a function has access to its own scope, including variables, functions, and parameters, as well as the scope in which it was created (its lexical environment). This allows the function to retain access to those variables and values even after the outer function has finished executing. In essence, a closure "closes" over its surrounding state, making it available to inner functions or when the outer function returns.
 
-### `npm run build`
+The function extendResponseValue captures the randomIntFromInterval function from the ../utils module and uses it to generate random votes for each joke in the response data. This makes extendResponseValue a closure because it uses variables (randomIntFromInterval) from its surrounding lexical scope (../utils module) that are not passed in as arguments.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Which are the potential side-effects in any function? Could you point out any of these cases in your code? Are they expected? Can they be avoided?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In programming, side-effects refer to observable changes that a function or expression causes outside of its scope, beyond returning a value. These effects can impact the program's state, environment, or other parts of the system. Some common potential side-effects are: Modifying State, Console Output, Network Calls, DOM Manipulation, Error or Event Handling.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The extendResponseValue function modifies each joke object by adding a votes property with a randomly generated value (randomIntFromInterval(1, 100)). This modification alters the state of the joke objects in the response.data array. I think this is expected.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The error logs are expected and can't be avoided in order to debug.
