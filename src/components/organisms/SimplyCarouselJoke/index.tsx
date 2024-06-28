@@ -21,6 +21,7 @@ const SimplyCarouselJoke: React.FC<SimplyCarouselJokeProps> = ({ isLoading, rand
         <GridLoader />
       ) : (
         <ReactSimplyCarousel
+          disableNavIfEdgeVisible
           activeSlideIndex={activeSlideIndex}
           onRequestChange={setActiveSlideIndex}
           itemsToShow={1}

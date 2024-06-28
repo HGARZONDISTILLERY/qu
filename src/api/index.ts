@@ -3,14 +3,19 @@ import { DAD_JOKE_API_URL, JOKES_API_URL } from '../utils/constants';
 import { DadJoke, Joke } from '../utils/types';
 import { randomIntFromInterval } from '../utils';
 
+const extendResponseValue = (response: { data: Joke[]} ) => {
+  const responseExtended = response.data.map(joke => ({
+    ...joke,
+    votes: randomIntFromInterval(1, 100),
+  }));
+  return responseExtended;
+}
+
 export const fetchRandomJokes = async (): Promise<Joke[]> => {
   try {
     const randomTenUrl = `${JOKES_API_URL}/jokes/ten`
     const response = await axios.get<Joke[]>(randomTenUrl);
-    const responseExtended = response.data.map(joke => ({
-      ...joke,
-      votes: randomIntFromInterval(1, 100),
-    }));
+    const responseExtended = extendResponseValue(response)
     return responseExtended;
   } catch (error) {
     console.error('Error fetching jokes:', error);
@@ -23,7 +28,8 @@ export const fetchJokesByType = async (type: string): Promise<Joke[]> => {
 
   try {
     const response = await axios.get<Joke[]>(JOKES_API_BY_TYPE_URL);
-    return response.data;
+    const responseExtended = extendResponseValue(response)
+    return responseExtended;
   } catch (error) {
     console.error(`Error fetching ${type} jokes:`, error);
     throw error;
