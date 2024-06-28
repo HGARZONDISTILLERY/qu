@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Dependencies
 
+### Frontend
+
 - Typescript
 - React-query
 - React-simply-carousel
@@ -11,6 +13,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React-error-boundary
 - React-Helmet
 - Jest
+
+### APIs
+
+https://github.com/15Dkatz/official_joke_api/tree/master
+
+https://icanhazdadjoke.com/
 
 ## Known issues
 
