@@ -29,3 +29,11 @@ h1.joke-show-title {
     0 36px 36px rgba(0, 0, 0, 0.15);
   margin: 0;
 }
+
+@media only screen and (max-width: 900px) {
+  h1.joke-show-title {
+    font-size: 80px;
+    margin: 30px 0;
+    padding: 10px;
+  }
+}

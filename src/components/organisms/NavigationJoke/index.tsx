@@ -22,13 +22,12 @@ const NavigationJoke: FC<{
     <Box component="nav" className="joke-category-nav">
       <FormControl className="joke-category-form">
         <Grid container spacing={3} alignItems="center">
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Autocomplete
               disablePortal
               disableClearable
               id="random-joke-select"
               options={jokeTypeList}
-              sx={{ width: 300 }}
               renderInput={(params) => (
                 <TextField {...params} label="Filter by joke type..." />
               )}
@@ -37,7 +36,7 @@ const NavigationJoke: FC<{
               }}
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={3}>
             <ButtonJoke
               onClick={() => {
                 setJokeCategoryValue("");
@@ -46,7 +45,7 @@ const NavigationJoke: FC<{
               buttonText="Get New Jokes"
             />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} md={3}>
             <Button variant="text" onClick={handleClickOpen}>
               Get a special dad joke
             </Button>
