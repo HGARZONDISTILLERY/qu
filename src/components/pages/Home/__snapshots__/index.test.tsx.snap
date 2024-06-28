@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <header
+        class="MuiBox-root css-0"
+      >
+        <h1
+          class="MuiTypography-root MuiTypography-h1 joke-show-title css-o2w69a-MuiTypography-root"
+        >
+          The joke show
+        </h1>
+      </header>
+      <div
+        class="MuiBox-root css-13800us"
+      >
+        <span
+          style="width: 165px; font-size: 0px; display: inline-block;"
+        >
+          <span
+            style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 0.6059515766135198s -0.19404842338648015s infinite ease;"
+          />
+          <span
+            style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.0511487748295698s 0.25114877482956993s infinite ease;"
+          />
+          <span
+            style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 0.8447648403770543s 0.04476484037705436s infinite ease;"
+          />
+          <span
+            style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 0.8617193529562773s 0.06171935295627734s infinite ease;"
+          />
+          <span
+            style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.0581080716712785s 0.2581080716712784s infinite ease;"
+          />
+          <span
+            style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.4840701375536964s 0.6840701375536966s infinite ease;"
+          />
+          <span
+            style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 0.7642357991657479s -0.03576420083425205s infinite ease;"
+          />
+          <span
+            style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.0671556650698073s 0.2671556650698074s infinite ease;"
+          />
+          <span
+            style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.3332695602298932s 0.5332695602298934s infinite ease;"
+          />
+        </span>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <header
+      class="MuiBox-root css-0"
+    >
+      <h1
+        class="MuiTypography-root MuiTypography-h1 joke-show-title css-o2w69a-MuiTypography-root"
+      >
+        The joke show
+      </h1>
+    </header>
+    <div
+      class="MuiBox-root css-13800us"
+    >
+      <span
+        style="width: 165px; font-size: 0px; display: inline-block;"
+      >
+        <span
+          style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 0.6059515766135198s -0.19404842338648015s infinite ease;"
+        />
+        <span
+          style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.0511487748295698s 0.25114877482956993s infinite ease;"
+        />
+        <span
+          style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 0.8447648403770543s 0.04476484037705436s infinite ease;"
+        />
+        <span
+          style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 0.8617193529562773s 0.06171935295627734s infinite ease;"
+        />
+        <span
+          style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.0581080716712785s 0.2581080716712784s infinite ease;"
+        />
+        <span
+          style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.4840701375536964s 0.6840701375536966s infinite ease;"
+        />
+        <span
+          style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 0.7642357991657479s -0.03576420083425205s infinite ease;"
+        />
+        <span
+          style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.0671556650698073s 0.2671556650698074s infinite ease;"
+        />
+        <span
+          style="display: inline-block; background-color: rgb(188, 16, 1); width: 15px; height: 15px; margin: 20px; border-radius: 100%; animation-fill-mode: both; animation: react-spinners-GridLoader-grid 1.3332695602298932s 0.5332695602298934s infinite ease;"
+        />
+      </span>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
