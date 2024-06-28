@@ -71,10 +71,12 @@ const TemplateJoke: FC = () => {
       <Box component="section" className="joke-category-section">
         {
           jokeTypeValue !== '' ?
+          <>
+          {renderError(randomJokeByTypeError)}
           <SimplyCarouselJoke
             isLoading={randomJokeByTypeIsLoading}
             randomJokeData={randomJokeByTypeData}
-          /> :
+          /></> :
           <SimplyCarouselJoke
             isLoading={randomJokeIsLoading}
             randomJokeData={randomJokeData}
