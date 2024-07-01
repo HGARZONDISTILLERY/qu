@@ -3,7 +3,7 @@ import { DAD_JOKE_API_URL, JOKES_API_URL } from "../utils/constants";
 import { DadJoke, Joke } from "../utils/types";
 import { randomIntFromInterval } from "../utils";
 
-const extendResponseValue = (response: { data: Joke[] }) => {
+export const extendResponseValue = (response: { data: Joke[] }) => {
   const responseExtended = response.data.map((joke) => ({
     ...joke,
     votes: randomIntFromInterval(1, 100),
